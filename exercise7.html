@@ -8,13 +8,23 @@
             var robotArm = new RobotArm(canvas);
 
             // Het levesl inladen
-            robotArm.loadLevel("exercise 1");
+            robotArm.loadLevel("exercise 8");
 
             // Jou instructies volgen hier
-            robotArm.moveRight();
-            robotArm.grab();
-            robotArm.moveLeft();
+              robotArm.moveRight();
+
+            for (var i = 0; i < 8; i++) {
+              robotArm.grab();
+              for(b = 0; b < 8; b++){
+                robotArm.moveRight();
+
+            }
             robotArm.drop();
+              for(c = 0; c < 8; c++){
+                robotArm.moveLeft();
+            }
+
+}
 
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
